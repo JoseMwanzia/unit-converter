@@ -1,0 +1,66 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f4f4f4;
+}
+.container {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.tabs {
+    display: flex;
+    border-bottom: 2px solid #ddd;
+}
+.tab {
+    flex: 1;
+    text-align: center;
+    padding: 10px 0;
+    cursor: pointer;
+    border-bottom: 2px solid transparent;
+    transition: all 0.3s ease;
+}
+.tab:hover {
+    background-color: #f9f9f9;
+}
+.tab.active {
+    border-bottom: 2px solid #007bff;
+    font-weight: bold;
+}
+.content {
+    display: none;
+    padding: 20px;
+}
+.content.active {
+    display: block;
+}
+.form-group {
+    margin-bottom: 20px;
+}
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+input, select, button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+}
+button {
+    background: #007bff;
+    color: white;
+    cursor: pointer;
+    border: none;
+}
+button:hover {
+    background: #0056b3;
+}
