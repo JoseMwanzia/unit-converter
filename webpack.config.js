@@ -2,9 +2,12 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-    entry: './server.js', // your entry point
+    entry: {
+       legth: './server.js',
+        weight: './weight.js'
+    }, // your entry points
     output: {
-        filename: 'bundle.js',
+        filename: '[name].bundle.js',
         path: path.resolve(__dirname, 'dist'),
     },
     resolve: {
