@@ -1,6 +1,6 @@
 require('./index.css')
 const convert = require('convert-units')
-const convertLength = document.getElementById('convertLength');
+const convertLengthBtn = document.getElementById('convertLength');
 const tabs = document.querySelectorAll('.tab');
 const contents = document.querySelectorAll('.content');
 
@@ -14,7 +14,7 @@ tabs.forEach(tab => {
     });
 });
 
-convertLength.addEventListener('click', (e) => {
+convertLengthBtn.addEventListener('click', (e) => {
     e.preventDefault()
     const input = document.getElementById('length-input').value
     const initialUnits = document.querySelector('#length-unit').value
