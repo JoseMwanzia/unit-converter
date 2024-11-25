@@ -4,7 +4,8 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 module.exports = {
     entry: {
        legth: './server.js',
-        weight: './weight.js'
+        weight: './weight.js',
+        temperature: './temperature.js'
     }, // your entry points
     output: {
         filename: '[name].bundle.js',
