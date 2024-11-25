@@ -439,13 +439,13 @@ eval("/**\n * Lo-Dash 2.3.0 (Custom Build) <http://lodash.com/>\n * Build: `loda
 
 /***/ }),
 
-/***/ "./weight.js":
-/*!*******************!*\
-  !*** ./weight.js ***!
-  \*******************/
+/***/ "./temperature.js":
+/*!************************!*\
+  !*** ./temperature.js ***!
+  \************************/
 /***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
 
-eval("const convert = __webpack_require__(/*! convert-units */ \"./node_modules/convert-units/lib/index.js\");\n\n\nconst convertWeightBtn = document.querySelector('#convertWeight');\n\nconvertWeightBtn.addEventListener('click', () => {\n    const input = document.getElementById('weight-input').value\n    const initialUnits = document.querySelector('#weight-unit').value\n    const targetUnits = document.getElementById('weight-target').value;\n\n    if (!input || isNaN(input)) {\n        alert(\"Please enter a valid number!\");\n        return;\n    }\n\n    try {\n        const measurement = convert(input).from(initialUnits).to(targetUnits)\n\n        // Select the container where results will be appended\n        const container = document.querySelector('.container')\n        const replaceTag = container.querySelector('#weight');\n        const originalHTML = replaceTag.innerHTML\n\n        if (measurement) {\n            replaceTag.innerHTML =\n            `<div>\n                <h2>Results of your calculation:</h2>\n                <h1>${input}${initialUnits} = ${measurement}${targetUnits}</h1>\n            </div>\n            <button class='w-25' id='reset-button' >Reset</button>\n            `\n            const resetButton = document.querySelector('#reset-button')\n            resetButton.addEventListener('click', () => {\n                replaceTag.innerHTML = originalHTML\n            })\n\n        } \n    } catch (error) {\n        console.error(error)\n    }\n})\n\n//# sourceURL=webpack://unit-converter/./weight.js?");
+eval("const convert = __webpack_require__(/*! convert-units */ \"./node_modules/convert-units/lib/index.js\");\n\nconst convertTemperatureBtn = document.querySelector('#convertTemp');\n\nconvertTemperatureBtn.addEventListener('click', () => {\n    const input = document.getElementById('temperature-input').value\n    const initialUnits = document.querySelector('#temperature-unit').value\n    const targetUnits = document.getElementById('temperature-target').value;\n\n    if (!input || isNaN(input)) {\n        alert(\"Please enter a valid number!\");\n        return;\n    }\n\n    try {\n        const measurement = convert(input).from(initialUnits).to(targetUnits)\n\n        // Select the container where results will be appended\n        const container = document.querySelector('.container')\n        const replaceTag = container.querySelector('#temperature');\n        const originalHTML = replaceTag.innerHTML\n\n        if (measurement) {\n            replaceTag.innerHTML =\n            `<div>\n                <h2>Results of your calculation:</h2>\n                <h1>${input}${initialUnits} = ${measurement}${targetUnits}</h1>\n            </div>\n            <button class='w-25' id='reset-button' >Reset</button>\n            `\n            const resetButton = document.querySelector('#reset-button')\n            resetButton.addEventListener('click', () => {\n                replaceTag.innerHTML = originalHTML\n            })\n\n        } \n    } catch (error) {\n        console.error(error)\n    }\n})\n\n//# sourceURL=webpack://unit-converter/./temperature.js?");
 
 /***/ })
 
@@ -493,7 +493,7 @@ eval("const convert = __webpack_require__(/*! convert-units */ \"./node_modules/
 /******/ 	// startup
 /******/ 	// Load entry module and return exports
 /******/ 	// This entry module can't be inlined because the eval devtool is used.
-/******/ 	var __webpack_exports__ = __webpack_require__("./weight.js");
+/******/ 	var __webpack_exports__ = __webpack_require__("./temperature.js");
 /******/ 	
 /******/ })()
 ;
