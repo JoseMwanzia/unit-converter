@@ -3,7 +3,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
     entry: {
-       legth: './server.js',
+       legth: './length.js',
         weight: './weight.js',
         temperature: './temperature.js'
     }, // your entry points
